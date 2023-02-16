@@ -1,0 +1,12 @@
+#root, html, cody {
+    margin: 0;
+    padding: 0;
+    height:100vh;
+    box-sizing:border-box;
+    background-color:#264653;
+    color:#e76f51;
+}
+
+.app {
+    height: 100%
+}

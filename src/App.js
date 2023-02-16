@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './App.css'
 
 
 const App = () => {
 
   const [advice2,setAdvice] = useState("");
 
-  function changeAdvice() {
-    setAdvice("yo");
-  }
-  
-  
-
   const fetchAdvice = axios.get('https://api.adviceslip.com/advice')
   .then((object)=>{
-    console.log(object.data.slip);
-    
+    object = object.data.slip;
+    let { id,advice } = object;
+    setAdvice(advice);
+
+  }).catch((error)=>{
+    console.log(error)
+    console.log("Data not loaded from API")
   });
 
-  let { id,advice } = fetchAdvice;
-
-  setAdvice(advice);
-
   return (
-    <div>App</div>
+    <div>
+      <h1>Advice Generator</h1>
+      <h2>{advice2}</h2>
+    </div>
   )
 }
 
