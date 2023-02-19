@@ -3,9 +3,7 @@
     padding: 0;
     height:100vh;
     box-sizing:border-box;
-    background-color:#264653;
-    color:#e76f51;
-    
+    text-transform: bold;
 }
 
 
@@ -24,9 +22,68 @@
 }
 
 .box{
-    background-color: aliceblue;
-    border-radius: 5px;
-    padding:10px 30px;
-    border-color: blue;
-    border-style: solid;
+    background-color: whitesmoke;
+    height: 20%;
+    width: 40%;
+    border-radius: 25px;
+    padding:2%;
+    box-shadow: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
+.button{
+    background-color: #ffffff;
+    outline: none;
+    border-radius: 20px;
+    padding:2.5%;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+}
+
+.button:hover{
+    animation:storm;
+    animation: rotate 0.7s ease-in-out both;
+}
+
+.button disabled{
+    text-decoration: line-through;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+    
+  @keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }  
