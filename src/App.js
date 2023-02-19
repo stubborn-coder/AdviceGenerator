@@ -19,9 +19,11 @@ const App = () => {
   });
 
   return (
-    <div>
-      <h1>Advice Generator</h1>
-      <h2>{advice2}</h2>
+    <div className='app'>
+      <div className='box'>
+        <h1>Advice Generator</h1>
+        <h2>{advice2}</h2>
+      </div>
     </div>
   )
 }
